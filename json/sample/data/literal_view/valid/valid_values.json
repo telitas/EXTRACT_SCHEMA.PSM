@@ -1,0 +1,24 @@
+[
+  {
+    "exact_numeric_literal": "999999999.999999",
+    "approximate_numeric_literal": 1.7976931348623157e+308,
+    "character_literal": "ABCDEFGHIJ",
+    "binary_literal": "ffffffffffffffffffff",
+    "boolean_literal": true,
+    "date_literal": "9999-12-31",
+    "time_literal": "23:59:59",
+    "timestamp_literal": "9999-12-31T23:59:59",
+    "interval_literal": "P9999Y99999M999999DT9999999H999999999M999999999S"
+  },
+  {
+    "exact_numeric_literal": null,
+    "approximate_numeric_literal": null,
+    "character_literal": null,
+    "binary_literal": null,
+    "boolean_literal": null,
+    "date_literal": null,
+    "time_literal": null,
+    "timestamp_literal": null,
+    "interval_literal": null
+  }
+]

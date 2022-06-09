@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/multiple_columns_key_table/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "multiple_primary_key_column_1": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "multiple_primary_key_column_2": {
+          "type": "string",
+          "maxLength": 10
+        }
+      },
+      "required": [
+        "multiple_primary_key_column_1",
+        "multiple_primary_key_column_2"
+      ]
+    }
+  }
+}

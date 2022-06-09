@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/literal_view/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "exact_numeric_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:[0-9]+(?:\\.[0-9]*)?|\\.[0-9]+)$"
+        },
+        "approximate_numeric_literal": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "character_literal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "binary_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-fA-F]{2})*$"
+        },
+        "boolean_literal": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "date_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "time_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "time"
+        },
+        "timestamp_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "interval_literal": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "duration"
+        }
+      }
+    }
+  }
+}

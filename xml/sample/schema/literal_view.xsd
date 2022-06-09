@@ -1,0 +1,57 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rows" type="Rows"/>
+  <xs:complexType name="Rows">
+    <xs:sequence>
+      <xs:element name="row" type="Row" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element name="exact_numeric_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="approximate_numeric_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:double"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="character_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="boolean_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="date_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:date"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="time_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:time"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="timestamp_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="interval_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:duration"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

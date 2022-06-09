@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/notnull_table/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "character_varying_column": {
+          "type": "string",
+          "maxLength": 10
+        },
+        "character_large_object_column": {
+          "type": "string"
+        },
+        "binary_varying_column": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-fA-F]{2})*$",
+          "maxLength": 20
+        },
+        "binary_large_object_column": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-fA-F]{2})*$"
+        },
+        "not_supported_type_column": {}
+      },
+      "required": [
+        "character_varying_column",
+        "character_large_object_column",
+        "binary_varying_column",
+        "binary_large_object_column",
+        "not_supported_type_column"
+      ]
+    }
+  }
+}

@@ -1,0 +1,24 @@
+<rows xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <row>
+    <exact_numeric_literal>999999999.999999</exact_numeric_literal>
+    <approximate_numeric_literal>1.7976931348623157E+308</approximate_numeric_literal>
+    <character_literal>ABCDEFGHIJ</character_literal>
+    <binary_literal>ffffffffffffffffffff</binary_literal>
+    <boolean_literal>true</boolean_literal>
+    <date_literal>9999-12-31</date_literal>
+    <time_literal>23:59:59</time_literal>
+    <timestamp_literal>9999-12-31T23:59:59</timestamp_literal>
+    <interval_literal>P9999Y99999M999999DT9999999H999999999M999999999S</interval_literal>
+  </row>
+  <row>
+    <exact_numeric_literal xsi:nil="true"/>
+    <approximate_numeric_literal xsi:nil="true"/>
+    <character_literal xsi:nil="true"/>
+    <binary_literal xsi:nil="true"/>
+    <boolean_literal xsi:nil="true"/>
+    <date_literal xsi:nil="true"/>
+    <time_literal xsi:nil="true"/>
+    <timestamp_literal xsi:nil="true"/>
+    <interval_literal xsi:nil="true"/>
+  </row>
+</rows>

@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/numeric_scale_table/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "two_precision_no_scale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0*[0-9]{1,2}(?:\\.0*)?|\\.0+)$"
+        },
+        "two_precision_one_scale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0*[0-9]{1,1}(?:\\.[0-9]{0,1}0*)?|\\.[0-9]{1,1}0*)$"
+        },
+        "two_precision_two_scale": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0+(?:\\.[0-9]{0,2}0*)?|\\.[0-9]{1,2}0*)$"
+        }
+      }
+    }
+  }
+}

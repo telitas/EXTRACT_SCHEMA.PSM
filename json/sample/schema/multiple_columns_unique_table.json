@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/multiple_columns_unique_table/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "multiple_unique_column_1": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 10
+        },
+        "multiple_unique_column_2": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 10
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema#",
+  "$id": "https://telitas.dev/extract_schema.psm/all_types_table/schema#",
+  "type": "array",
+  "items": {
+    "$ref": "#/definitions/row"
+  },
+  "definitions": {
+    "row": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "numeric_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0|[1-9][0-9]{0,8})(?:\\.[0-9]{0,5}[1-9])?$"
+        },
+        "decimal_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^-?(?:0|[1-9][0-9]{0,8})(?:\\.[0-9]{0,5}[1-9])?$"
+        },
+        "smallint_column": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": -32768,
+          "maximum": 32767
+        },
+        "integer_column": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": -2147483648,
+          "maximum": 2147483647
+        },
+        "bigint_column": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": -9223372036854776000,
+          "maximum": 9223372036854776000
+        },
+        "float_column": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -1.7976931348623157e+308,
+          "maximum": 1.7976931348623157e+308
+        },
+        "real_column": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -3.4028235e+38,
+          "maximum": 3.4028235e+38
+        },
+        "double_precision_column": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": -1.7976931348623157e+308,
+          "maximum": 1.7976931348623157e+308
+        },
+        "character_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "character_varying_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 10
+        },
+        "character_large_object_column": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "binary_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-fA-F]{2})*$",
+          "minLength": 20,
+          "maxLength": 20
+        },
+        "binary_varying_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-fA-F]{2})*$",
+          "maxLength": 20
+        },
+        "binary_large_object_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^(?:[0-9a-fA-F]{2})*$"
+        },
+        "boolean_column": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "date_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date"
+        },
+        "time_without_time_zone_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "time",
+          "pattern":  "^(?!.*([Zz]|[+-][0-9]{2}:[0-9]{2})).*$"
+        },
+        "time_with_time_zone_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "time",
+          "pattern": "(?:[Zz]|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "timestamp_without_time_zone_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern":  "^(?!.*([Zz]|[+-][0-9]{2}:[0-9]{2})).*$"
+        },
+        "timestamp_with_time_zone_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time",
+          "pattern": "(?:[Zz]|[+-][0-9]{2}:[0-9]{2})$"
+        },
+        "interval_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "duration"
+        },
+        "not_supported_type_column": {}
+      }
+    }
+  }
+}

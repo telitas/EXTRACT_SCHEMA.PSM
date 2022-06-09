@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rows" type="Rows"/>
+  <xs:complexType name="Rows">
+    <xs:sequence>
+      <xs:element name="row" type="Row" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element name="character_varying_column">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="character_large_object_column">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_varying_column">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_large_object_column">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="not_supported_type_column"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

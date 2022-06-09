@@ -1,0 +1,140 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="rows" type="Rows"/>
+  <xs:complexType name="Rows">
+    <xs:sequence>
+      <xs:element name="row" type="Row" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element name="numeric_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="15"/>
+            <xs:fractionDigits value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="decimal_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:decimal">
+            <xs:totalDigits value="15"/>
+            <xs:fractionDigits value="6"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="smallint_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:short"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="integer_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:int"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="bigint_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:long"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="float_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:double"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="real_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:float"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="double_precision_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:double"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="character_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="character_varying_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="character_large_object_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary">
+            <xs:length value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_varying_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="binary_large_object_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:hexBinary"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="boolean_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:boolean"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="date_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:date"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="time_without_time_zone_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:time">
+            <xs:pattern value=".*[^+-].{4}[^Zz]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="time_with_time_zone_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:time">
+            <xs:pattern value=".*([Zz]|[+-][0-9]{2}:[0-9]{2})"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="timestamp_without_time_zone_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime">
+            <xs:pattern value=".*[^+-].{4}[^Zz]"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="timestamp_with_time_zone_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:dateTime">
+            <xs:pattern value=".*([Zz]|[+-][0-9]{2}:[0-9]{2})"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="interval_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:duration"/>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="not_supported_type_column" nillable="true" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
