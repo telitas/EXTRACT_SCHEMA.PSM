@@ -29,6 +29,12 @@
             "null"
           ]
         },
+        "national_character_literal": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "binary_literal": {
           "type": [
             "string",

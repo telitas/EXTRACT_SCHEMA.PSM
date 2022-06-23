@@ -93,6 +93,27 @@
             "null"
           ]
         },
+        "national_character_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 10,
+          "maxLength": 10
+        },
+        "national_character_varying_column": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 10
+        },
+        "national_character_large_object_column": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "binary_column": {
           "type": [
             "string",

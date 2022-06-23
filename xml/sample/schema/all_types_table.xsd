@@ -72,6 +72,25 @@
           <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="national_character_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:length value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="national_character_varying_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:maxLength value="10"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="national_character_large_object_column" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="binary_column" nillable="true" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:hexBinary">

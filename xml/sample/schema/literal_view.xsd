@@ -22,6 +22,11 @@
           <xs:restriction base="xs:string"/>
         </xs:simpleType>
       </xs:element>
+      <xs:element name="national_character_literal" nillable="true" minOccurs="0">
+        <xs:simpleType>
+          <xs:restriction base="xs:string"/>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="binary_literal" nillable="true" minOccurs="0">
         <xs:simpleType>
           <xs:restriction base="xs:hexBinary"/>

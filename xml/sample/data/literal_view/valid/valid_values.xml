@@ -3,6 +3,7 @@
     <exact_numeric_literal>999999999.999999</exact_numeric_literal>
     <approximate_numeric_literal>1.7976931348623157E+308</approximate_numeric_literal>
     <character_literal>ABCDEFGHIJ</character_literal>
+    <national_character_literal>ABCDEFGHIJ</national_character_literal>
     <binary_literal>ffffffffffffffffffff</binary_literal>
     <boolean_literal>true</boolean_literal>
     <date_literal>9999-12-31</date_literal>
@@ -14,6 +15,7 @@
     <exact_numeric_literal xsi:nil="true"/>
     <approximate_numeric_literal xsi:nil="true"/>
     <character_literal xsi:nil="true"/>
+    <national_character_literal xsi:nil="true"/>
     <binary_literal xsi:nil="true"/>
     <boolean_literal xsi:nil="true"/>
     <date_literal xsi:nil="true"/>
