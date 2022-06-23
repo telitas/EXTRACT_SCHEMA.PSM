@@ -33,7 +33,7 @@ sequenceDiagram
     participant Server
     Server ->> User: Download schemas and data.
     rect rgb(128, 128, 128)
-        note right of User: work in offine area
+        note right of User: work in offline area
         loop
             User ->> User: Collect & validate data <br>using schemas.
         end
@@ -65,7 +65,7 @@ Currently, it only supports Standard SQL predefined data type.
 |PostgreSQL| ✔ | ✔  |https://github.com/telitas/EXTRACT_SCHEMA.PSM-postgresql|
 |MySQL     | - | ✔  |https://github.com/telitas/EXTRACT_SCHEMA.PSM-mysql     |
 
-# Roadmap
+## Roadmap
 
 - implement in other RDB(Oracle, SQL Server)
 - supprot constructed type and user-defined type.

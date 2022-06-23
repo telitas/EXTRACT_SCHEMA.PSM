@@ -23,7 +23,6 @@ RDBMSの変更をする際に、コンバージョンにかかる負荷が低減
 
 ## 使用例
 
-
 ### オフラインの複製データとして使用する
 
 もしアプリがオフライン下で使用される場合、生成したスキーマをオフラインの複製データとして使用できます。
@@ -59,14 +58,14 @@ sequenceDiagram
 
 ## 実装
 
-現在、標準SQLの既定義データのみ対応しています。
+現在、標準SQLの既定義データ型のみ対応しています。
 
-|   RDBMS  |XML|JSON(preview)|                      Project site                      |
+|   RDBMS  |XML|JSON(preview)|                      プロジェクトサイト                      |
 |----------|:-:|:--:|--------------------------------------------------------|
 |PostgreSQL| ✔ | ✔  |https://github.com/telitas/EXTRACT_SCHEMA.PSM-postgresql|
 |MySQL     | - | ✔  |https://github.com/telitas/EXTRACT_SCHEMA.PSM-mysql     |
 
-# 今後の予定
+## 今後の予定
 
 - 他RDBの実装(Oracle, SQL Server)
 - 構成型・ユーザ定義型の対応
